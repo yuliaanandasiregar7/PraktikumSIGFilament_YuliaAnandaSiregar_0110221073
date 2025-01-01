@@ -37,7 +37,7 @@ class KabkotaResource extends Resource
                 Forms\Components\TextInput::make('longitude')
                     ->required()
                     ->numeric(),
-
+                    
                 Forms\Components\Select::make('provinsi_id')
                 ->required()
                 ->options(

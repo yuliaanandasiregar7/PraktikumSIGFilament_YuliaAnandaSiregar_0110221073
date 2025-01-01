@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('kabkota', function (Blueprint $table) {
+        Schema::create('kabkotas', function (Blueprint $table) {
             $table->id();
             $table->string('name',30)->unique()->nullable(false);
             $table->string('alt_name',30);
             $table->double('latitude');
             $table->double('longitude');
-            $table->foreignId('provinsi_id')->constrained('provinsi');
+            $table->foreignId('provinsi_id')->constrained('provinsis');
 
             $table->timestamps();
         });
